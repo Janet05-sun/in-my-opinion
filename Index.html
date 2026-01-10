@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>the public archive.</title>
+  <meta name="description" content="Thoughtful commentary and personal takes on issues that matter." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Pinyon+Script&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+
+
+    <nav aria-label="Main navigation">
+      <a class="logo" href="/">the personal archive.</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#articles">Archive</a></li>
+        <li><a href="#contact">Personal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Welcome</h1>
+      <p>Fresh perspectives, honest writing, and public conversation. Explore essays, opinions, and reflections.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> the personal archive</p>
+    <script>
+      // small script to set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
