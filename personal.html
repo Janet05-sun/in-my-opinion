@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal - the personal archive.</title>
+  <meta name="description" content="Personal section of the archive." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Pinyon+Script&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <div></div>
+      <a class="logo" href="/">the personal archive.</a>
+      <ul>
+        <a class="label" href="/">Archive</a>
+        <a class="label" href="about.html" target="_blank">About</a>
+        <a class="label active" href="personal.html" target="_blank">Personal</a>
+      </ul>
+    </nav>
+  </header>
+<main class="archive">
+
+  <div class="archive-header">
+    <span>+</span> personal
+  </div>
+
+  <section class="coming-soon">
+    <h1>Coming Soon!</h1>
+    <p>This section is under development. Check back soon!</p>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> the personal archive</p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
