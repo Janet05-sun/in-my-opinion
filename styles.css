@@ -75,17 +75,25 @@ nav ul {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  margin-bottom: 48px;
+margin-top: 35px;
+  margin-bottom: 155px;
   opacity: 0.6;
+
 }
 
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 48px 32px;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 32px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 48px 32px 48px;
+  scrollbar-width: none;
+}
+
+.grid::-webkit-scrollbar {
+  display: none;
 }
 
 
@@ -95,6 +103,8 @@ nav ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  width: 290px;
 }
 
 .item img {
@@ -103,14 +113,19 @@ nav ul {
   aspect-ratio: 1 / 1.4;
   border-radius: 4px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 3px 2px 8px #0000001a;
   object-fit: cover;
+
+  
 }
 
 
 
 
 .item img:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  opacity: 0.5;
+  filter: invert();
 }
 
 
@@ -168,13 +183,15 @@ footer p {
 }
 
 .article-content {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0;
+  padding-left: 48px;
 }
 
 .article-content h1 {
   font-size: 28px;
   margin: 24px 0;
+  padding-left: -80px;
 }
 
 .article-date {
@@ -211,13 +228,30 @@ footer p {
 
 .lines-container {
   margin-top: 32px;
+  margin-left: 48px;
+  margin-right: 48px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 
 .line {
-  width: 100%;
-  height: 1px;
-  background-color: #e5e5e5;
+  width: 150%;
+  height: 1.8px;
+  background-color: #00000082;
 }
+
+.line-number {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+

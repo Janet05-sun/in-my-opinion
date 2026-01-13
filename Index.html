@@ -16,11 +16,11 @@
 
     <nav aria-label="Main navigation">
       <div></div>
-      <a class="logo" href="/">the personal archive.</a>
+      <a class="logo" href="/">the public archive.</a>
       <ul>
-        <a class="label active" href="#articles">Archive</a>
+        <a class="label active" href="#articles">Public</a>
+        <a class="label" href="personal.html">Personal</a>
         <a class="label" href="about.html" >About</a>
-        <a class="label" href="personal.html" >Personal</a>
       </ul>
     </div>
     </nav>
@@ -28,35 +28,59 @@
 <main class="archive">
 
   <div class="archive-header">
-    <span>+</span> archival
+    <span>+</span> public archival
   </div>
 
-  <section class="grid">
-    
-    <article class="item">
+  <section class="grid"> 
+    <article class="item"> 
       <a href="stranger.html" class="item-link">
-        <img src="images/stranger.jpg" alt="The Stranger">
+       <img src="images/stranger.jpg" alt="The Stranger">
         <p class="meta">The Stranger<br><span>01.12.26</span></p>
-      </a>
-    </article>
-
-    <article class="item selected">
-      <img src="images/BJ.jpg" alt="Bonjour Tristesse">
-      <p class="meta">Bonjour Tristesse<br><span>01.12.26</span></p>
-    </article>
-
-    <article class="item">
+       </a> 
+      </article> 
+      <article class="item selected"> 
+        <img src="images/R.jpg" alt="Bonjour Tristesse"> 
+        <p class="meta">Bonjour Tristesse<br><span>01.12.26</span></p> 
+       </article> 
+       
+       <article class="item"> 
+        <img src="images/OIP.webp" alt="Before the Coffee Gets Cold"> 
+        <p class="meta">Before the Coffee Gets Cold<br><span>01.12.26</span></p> 
+      </article> 
+      
+      <article class="item"> 
       <img src="images/OIP.webp" alt="Before the Coffee Gets Cold">
-      <p class="meta">Before the Coffee Gets Cold<br><span>01.12.26</span></p>
+      <p class="meta">Before the Coffee Gets Cold<br><span>01.12.26</span></p> 
+     </article> 
+     
+     <article class="item"> 
+      <img src="images/OIP.webp" alt="Before the Coffee Gets Cold"> 
+      <p class="meta">Before the Coffee Gets Cold<br><span>01.12.26</span></p> 
+     </article> 
+     
+     <article class="item"> 
+      <img src="images/Meta.jpg" alt="Metamorphosis"> 
+      <p class="meta">Metamorphosis<br><span>01.12.26</span></p> 
+    </article> 
+
+     <article class="item"> 
+      <img src="images/Meta.jpg" alt="Metamorphosis"> 
+      <p class="meta">Metamorphosis<br><span>01.12.26</span></p> 
     </article>
 
-    <article class="item">
-      <img src="images/Meta.jpg" alt="Metamorphosis">
-      <p class="meta">Metamorphosis<br><span>01.12.26</span></p>
+     <article class="item"> 
+      <img src="images/Meta.jpg" alt="Metamorphosis"> 
+      <p class="meta">Metamorphosis<br><span>01.12.26</span></p> 
     </article>
+    
+     <article class="item"> 
+      <img src="images/Meta.jpg" alt="Metamorphosis"> 
+      <p class="meta">Metamorphosis<br><span>01.12.26</span></p> 
+    </article> 
 
-
+  
   </section>
+
 </main>
 
 
@@ -64,6 +88,12 @@
     <p>&copy; <span id="year"></span> the personal archive</p>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      
+      const grid = document.querySelector('.grid');
+      grid.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        grid.scrollLeft += e.deltaY;
+      });
     </script>
   </footer>
 </body>
