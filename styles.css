@@ -66,7 +66,7 @@ nav ul {
 
 
 .archive {
-  padding: 48px 48px 80px;
+  padding: 48px 0 80px 0;
   flex: 1;
 }
 
@@ -75,10 +75,9 @@ nav ul {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.02em;
-margin-top: 35px;
+  margin-top: 35px;
   margin-bottom: 155px;
   opacity: 0.6;
-
 }
 
 
@@ -88,8 +87,23 @@ margin-top: 35px;
   gap: 32px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0 48px 32px 48px;
+  padding: 0 0 32px 48px;
   scrollbar-width: none;
+  position: relative;
+}
+
+.blur-overlay {
+  position: sticky;
+  right: 0;
+  width: 120px;
+  height: 420px;
+  margin-left: -120px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  border-right: 1px solid #e5e5e5;
+  pointer-events: none;
+  z-index: 5;
+  flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .grid::-webkit-scrollbar {
@@ -125,7 +139,7 @@ margin-top: 35px;
 .item img:hover {
   transform: translateY(-1px);
   opacity: 0.5;
-  filter: invert();
+  filter: grayscale(100%);
 }
 
 
@@ -184,20 +198,19 @@ footer p {
 
 .article-content {
   max-width: 1200px;
-  margin: 0;
-  padding-left: 48px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .article-content h1 {
   font-size: 28px;
   margin: 24px 0;
-  padding-left: -80px;
 }
 
 .article-date {
   font-size: 16px;
   opacity: 0.6;
-  margin: 0 0 24px 0;
+  margin: 0 0 48px 0;
 }
 
 .article-image {

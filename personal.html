@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Personal - the personal archive.</title>
+  <title>Personal - the public archive.</title>
   <meta name="description" content="Personal section of the archive." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,28 +14,32 @@
   <header>
     <nav aria-label="Main navigation">
       <div></div>
-      <a class="logo" href="/">the personal archive.</a>
+      <a class="logo" href="/">the public archive.</a>
       <ul>
         <a class="label" href="/">Public</a>
-        <a class="label active" href="personal.html" >Personal</a>
         <a class="label" href="about.html" >About</a>
+        <a class="label active" href="personal.html" >Personal</a>
       </ul>
     </nav>
   </header>
 <main class="archive">
 
   <div class="archive-header">
-    <span>+</span> personal
+    <span>+</span> personal archive
   </div>
 
-  <section class="coming-soon">
-    <h1>Coming Soon!</h1>
-    <p>This section is under development. Check back soon!</p>
+  <section class="grid"> 
+    <article class="item"> 
+      <a href="personal-coffee.html" class="item-link">
+        <img src="images/OIP.webp" alt="Tales from the Cafe"> 
+        <p class="meta">Tales from the Cafe<br><span>01.12.26</span></p> 
+      </a>
+    </article> 
   </section>
 </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> the personal archive</p>
+    <p>&copy; <span id="year"></span> the archive</p>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>

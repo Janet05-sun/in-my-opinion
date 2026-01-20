@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tales from the Cafe - the public archive.</title>
+  <meta name="description" content="Tales from the Cafe - personal highlights and sketches." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Pinyon+Script&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <style>
+    .article-content {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('images/IMG_2922.JPG');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      text-align: center;
+      cursor: pointer;
+      transition: background-image 0.3s ease;
+    }
+    
+    .article-content article {
+      max-width: 800px;
+      transform: translateY(-70px);
+    }
+
+    .article-content h1 {
+      font-size: 32px;
+      line-height: 1.5;
+      font-weight: 400;
+      font-style: italic;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <div></div>
+      <a class="logo" href="/">the public archive.</a>
+      <ul>
+        <a class="label" href="/">Public</a>
+        <a class="label" href="about.html" >About</a>
+        <a class="label active" href="personal.html" >Personal</a>
+      </ul>
+    </nav>
+  </header>
+<main class="archive">
+
+  <div class="archive-header">
+    <span>+</span> Tales from the Cafe
+  </div>
+
+  <section class="article-content" id="click-area">
+    <article>
+      <h1 id="quote-text">“We cannot change the past, but we can choose how we live in the present.”</h1>
+    </article>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> the archive</p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const clickArea = document.getElementById('click-area');
+      const quoteText = document.getElementById('quote-text');
+      let state = 0;
+
+      const content = [
+        {
+          text: "“We cannot change the past, but we can choose how we live in the present.”",
+          image: "url('images/IMG_2922.JPG')"
+        },
+        {
+          text: "“Drink the coffee before it goes cold.”",
+          image: "url('images/IMG_2920.PNG')"
+        },
+        {
+          text: "“If you try to find happiness after this, then this life has meaning.”",
+          image: "url('images/IMG_2921.JPG')"
+        },
+        {
+          text: "“Some people will only confide in someone they trust, while others need the listener to be a complete stranger.”",
+          image: "url('images/IMG_2923.JPG')"
+        },
+        {
+          text: "“Time flows, but the heart remembers..”",
+          image: "url('images/IMG_2924.JPG')"
+        }
+      ];
+
+      clickArea.addEventListener('click', () => {
+        state = (state + 1) % content.length;
+        quoteText.textContent = content[state].text;
+        clickArea.style.backgroundImage = content[state].image;
+      });
+    </script>
+  </footer>
+</body>
+</html>
